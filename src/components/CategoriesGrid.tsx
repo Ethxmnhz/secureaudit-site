@@ -12,8 +12,8 @@ export default function CategoriesGrid() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           eyebrow="Coverage"
-          title="16 control categories — full coverage"
-          subtitle="Presence detection + enforcement validation across the controls that matter."
+          title="16+ control categories — expanding"
+          subtitle="Presence detection + enforcement validation across today’s 16 core controls — with more being added."
           align="center"
         />
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -45,6 +45,20 @@ export default function CategoriesGrid() {
               </Reveal>
             );
           })}
+          {/* More coming card */}
+          <Reveal delay={0.02 * CATEGORIES.length} className="h-full">
+            <div className="glass rounded-xl p-4 border border-dashed border-white/20 hover:-translate-y-0.5 transition-transform h-full min-h-[128px] flex flex-col">
+              <div className="flex items-start gap-3">
+                <div className="h-9 w-9 rounded-lg bg-slate-900/60 border border-white/10 flex items-center justify-center">
+                  <span className="h-2 w-2 rounded-full bg-brand-400"></span>
+                </div>
+                <div className="flex-1">
+                  <div className="text-slate-100 font-medium leading-tight">More categories coming</div>
+                  <div className="mt-2 text-[12px] text-slate-400">Examples: Browser Isolation, App Sandboxing, Microsegmentation…</div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
